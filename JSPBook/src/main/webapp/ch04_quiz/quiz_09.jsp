@@ -5,11 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
 <body>
 	<h4>구구단 출력하기</h4>
 	<jsp:include page="include_data.jsp">
 		<jsp:param value="5" name="number"/>
 	</jsp:include>
+	
 </body>
 </html>
