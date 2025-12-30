@@ -1,9 +1,10 @@
+<%@page import="dao.BookRepository"%>
 <%@page import="dto.Book"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- session이 연결되는 동안 도서 데이터를 공유하기 위해 사용 -->
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session"/>
+<%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session"/> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,12 @@
     </jsp:include>
       
     <%
-    	ArrayList<Book> bookList = bookDAO.getAllBooks();
+    	/* ArrayList<Book> bookList = bookDAO.getAllBooks(); */
+    	// BookRepository 공유 객체로 변경
+    	// 왜? 자바빈을 사용하면 해당 객체가 scope 내에 존재하면 재사용하고
+    	// 존재하지 않으면 새롭게 생성하기 떄문에 객체 내 데이터가 불일치 발생
+    	BookRepository dao = BookRepository.getInstance();
+    	ArrayList<Book> bookList = dao.getAllBooks();
     %>
     <!-- 본문 영역 -->
     <div class="row align-items-md-stretch text-center">

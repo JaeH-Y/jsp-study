@@ -1,5 +1,7 @@
 package dto;
 
+import java.util.Objects;
+
 // 도서 클래스(도서 데이터를 표현하는 클래스로 자바빈으로 작성)
 public class Book {
 	private String bookId; 		 	// 책 ID
@@ -125,5 +127,26 @@ public class Book {
 				+ ", unitsInStock=" + unitsInStock + ", releaseDate=" + releaseDate + ", condition=" + condition
 				+ ", filename=" + filename + "]";
 	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(bookId);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		return Objects.equals(bookId, other.bookId);
+	}
+
+	
 	
 }
