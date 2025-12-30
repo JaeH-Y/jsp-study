@@ -53,6 +53,11 @@
         	</p>
         	<p><%= book.getDescription().substring(0,60) %>...</p>
         	<p><%= book.getUnitPrice() %>원</p>
+        	<p>
+        		<a href="./book.jsp?id=<%=book.getBookId()%>&ind=<%= bookList.indexOf(book) %>" class="btn btn-secondary" role="button">
+        		상세정보 &raquo;
+        		</a>
+        	</p>
         </div>
       </div>
       <%
