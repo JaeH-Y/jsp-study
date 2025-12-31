@@ -51,6 +51,13 @@
       <div class="col-md-4">
         <div class="h-100 p-2">
         	<!-- 도서 정보 -->
+        	
+        	<!-- 이처럼 내부 폴더의 이미지를 활용하는건 오로지 학습용 -->
+        	<%-- <img alt="도서이미지" src="./resources/images/<%= book.getFilename() %>" style="width: 250px; height: 350px;"> --%>
+        	
+        	<!-- 외부 폴더 사용 시 -->
+        	<img alt="도서이미지" src="<%= request.getContextPath()%>/images/<%= book.getFilename() %>" style="width: 250px; height: 350px;">
+        	
         	<h5><b><%= book.getName() %></b></h5>
         	<p>
         		<%= book.getAuthor() %>

@@ -12,6 +12,8 @@
 	<title>도서 정보</title>
 	<!-- 부트스트랩 연결 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- 로컬에서 직접 넣기 -->
+	<!-- <link rel="stylesheet" href="resources/css/bootstrap.min.css"> -->
 </head>
 <body>
 	<div class="container py-4">
