@@ -47,6 +47,23 @@
       </div>
  		</div>
  		
+ 		<div class="row align-items-md-stretch text-center">
+      <div class="col-md-6">
+        <div class="h-100 p-5">
+        	<a href="books.jsp">
+        		<button>도서 목록으로 이동</button>
+        	</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5">
+        	<a href="books.jsp">
+        		<button>도서 등록으로 이동</button>
+        	</a>
+        </div>
+      </div>
+ 		</div>
+ 		
  		<%@ include file ="./footer.jsp" %>
  		
 	</div>
